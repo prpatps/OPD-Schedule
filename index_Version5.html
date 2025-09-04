@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor OPD Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Splash screen styles */
+    #splash {
+      position: fixed;
+      z-index: 9999;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+      top: 0; left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.7s ease;
+    }
+    #splash-logo {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      animation: splashpop 1.3s;
+      /* Optional: fade-in effect for logo */
+      opacity: 0;
+      animation: splashpop 1.3s forwards;
+    }
+    @keyframes splashpop {
+      0% { transform: scale(0.8); opacity: 0.3; }
+      60% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    #splash.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Main page styles */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 24px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 32px;
+      font-weight: 600;
+      color: #3792cb;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      background: #f9fbfd;
+    }
+    th, td {
+      border: 1px solid #e1e8ed;
+      padding: 14px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #eaf3fa;
+      font-weight: 600;
+      color: #276da3;
+      text-align: center;
+    }
+    td {
+      min-width: 120px;
+      font-size: 15px;
+    }
+    .doctor-block {
+      margin-bottom: 12px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    a.doctor-link {
+      color: #2a6ad7;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.2s;
+    }
+    a.doctor-link:hover {
+      text-decoration: underline;
+    }
+    .specialty {
+      display: block;
+      font-size: 14px;
+      color: #40916c;
+      margin: 2px 0 0 0;
+      font-style: italic;
+    }
+    .note {
+      display: block;
+      font-size: 13px;
+      color: #7a869a;
+      margin-top: 3px;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 7vw 2vw;
+      }
+      th, td {
+        padding: 10px 5px;
+        font-size: 14px;
+      }
+      .container {
+        overflow-x: auto;
+      }
+      table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Splash Screen (shows for 1.5 seconds) -->
+  <div id="splash">
+    <!-- Use your hospital logo image here. Make sure 'hospital-logo.png' is in the same folder as this HTML file. -->
+    <img src="hospital-logo.png" alt="Rajavithi Hospital Logo" id="splash-logo">
+  </div>
+
+  <div class="container">
+    <h1>Doctor OPD Schedule</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Doctors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Monday</th>
+          <td>
+            <div class="doctor-block">
+              <img src="doctor1.png" alt="Doctor Icon" class="icon">
+              <a href="https://linktr.ee/doctorA" class="doctor-link" target="_blank">Dr. A</a>
+              <span class="specialty">Specialty: General Medicine</span>
+              <span class="note">Every Monday</span>
+            </div>
+            <div class="doctor-block">
+              <img src="doctor2.png" alt="Doctor Icon" class="icon">
+              <a href="https://linktr.ee/doctorB" class="doctor-link" target="_blank">Dr. B</a>
+              <span class="specialty">Specialty: Pediatrics</span>
+              <span class="note">1st &amp; 3rd Monday only</span>
+            </div>
+            <!-- Add more as needed -->
+          </td>
+        </tr>
+        <tr>
+          <th>Tuesday</th>
+          <td>
+            <div class="doctor-block">
+              <img src="doctor3.png" alt="Doctor Icon" class="icon">
+              <a href="https://linktr.ee/doctorC" class="doctor-link" target="_blank">Dr. C</a>
+              <span class="specialty">Specialty: Orthopedics</span>
+              <span class="note">Every Tuesday</span>
+            </div>
+            <!-- Add more as needed -->
+          </td>
+        </tr>
+        <tr>
+          <th>Wednesday</th>
+          <td>
+            <div class="doctor-block">
+              <img src="doctor4.png" alt="Doctor Icon" class="icon">
+              <a href="https://linktr.ee/doctorD" class="doctor-link" target="_blank">Dr. D</a>
+              <span class="specialty">Specialty: Dermatology</span>
+              <span class="note">2nd &amp; 4th Wednesday only</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Thursday</th>
+          <td>
+            <!-- Example placeholder -->
+            <!--
+            <div class="doctor-block">
+              <img src="doctorX.png" alt="Doctor Icon" class="icon">
+              <a href="https://linktr.ee/doctorX" class="doctor-link" target="_blank">Dr. X</a>
+              <span class="specialty">Specialty: [Specialty]</span>
+              <span class="note">[Availability note]</span>
+            </div>
+            -->
+          </td>
+        </tr>
+        <tr>
+          <th>Friday</th>
+          <td>
+            <!-- Placeholder: add doctors here -->
+          </td>
+        </tr>
+        <tr>
+          <th>Saturday</th>
+          <td>
+            <!-- Placeholder: add doctors here -->
+          </td>
+        </tr>
+        <tr>
+          <th>Sunday</th>
+          <td>
+            <!-- Placeholder: add doctors here -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-align:center; color:#888; font-size:13px;">
+      <!-- Optional: Add hospital/contact info here -->
+      Last updated: <span id="lastUpdated"></span>
+    </p>
+  </div>
+  <script>
+    // Hide splash after 1.5 seconds
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.getElementById('splash').classList.add('hide');
+      }, 1500); // 1.5 seconds
+      document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+    });
+  </script>
+</body>
+</html>
