@@ -5,7 +5,6 @@
   <title>Ophthalmologist OPD Schedule</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <style>
-    /* Splash screen styles */
     #splash {
       position: fixed;
       z-index: 9999;
@@ -77,7 +76,9 @@
       padding: 10px 6px;
       text-align: left;
       vertical-align: top;
-      word-break: break-word;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     th {
       background: #fedeff;
@@ -85,15 +86,17 @@
       color: #000000;
       text-align: center;
       font-size: 1em;
-      min-width: 70px;      /* SHRUNK FROM 120px */
-      max-width: 100px;     /* LIMIT LEFT COLUMN WIDTH */
-      width: 90px;          /* SUGGESTED COLUMN WIDTH */
-      word-break: break-word;
+      min-width: 120px;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     td {
       min-width: 120px;
       font-size: 0.98em;
-      word-break: break-word;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     .doctor-block {
       margin-bottom: 10px;
@@ -103,8 +106,10 @@
       text-decoration: none;
       font-weight: 500;
       transition: text-decoration 0.2s;
-      word-break: break-all;
       font-size: 1em;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     a.doctor-link:hover {
       text-decoration: underline;
@@ -115,14 +120,18 @@
       color: #40916c;
       margin: 2px 0 0 0;
       font-style: italic;
-      word-break: break-word;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     .note {
       display: block;
       font-size: 0.93em;
       color: #333333;
       margin-top: 2px;
-      word-break: break-word;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
     }
     @media (max-width: 700px) {
       .container {
@@ -135,11 +144,6 @@
       }
       h1 {
         font-size: 1em;
-      }
-      th {
-        min-width: 60px;    /* SHRUNK FOR MOBILE */
-        max-width: 80px;
-        width: 70px;
       }
     }
     @media (max-width: 480px) {
@@ -156,11 +160,6 @@
       }
       h1 {
         font-size: 0.99em;
-      }
-      th {
-        min-width: 50px;
-        max-width: 70px;
-        width: 60px;
       }
     }
   </style>
@@ -211,7 +210,7 @@
             </div>
             <div class="doctor-block">
               <a href="https://linktr.ee/sukhum.s" class="doctor-link" target="_blank">รศ.นพ.สุขุม ศิลปอาชา | Asso. Prof. Sukhum Silpa-Archa MD.</a>
-              <span class="specialty">จอตา และ ภูมิคุ้มกันและตาอักเสบ | Vitreoretina and Uveitis</span>
+              <span class="specialty">จอตาและวุ้นตาและตาอักเสบ | Vitreoretina and Uveitis</span>
               <span class="note">ทุกวันอังคาร</span>
             </div>
           </td>
