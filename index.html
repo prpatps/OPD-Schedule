@@ -62,14 +62,17 @@
       color: #000000;
       font-size: 1.1em;
     }
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 12px;
       background: #f9fbfd;
       font-size: 0.96em;
-      overflow-x: auto;
-      display: block;
+      min-width: 420px;
     }
     th, td {
       border: 1px solid #e1e8ed;
@@ -92,11 +95,12 @@
       overflow-wrap: normal;
     }
     td {
-      min-width: 120px;
+      min-width: 320px;
       font-size: 0.98em;
-      white-space: normal;
+      white-space: nowrap;
       word-break: normal;
       overflow-wrap: normal;
+      max-width: none;
     }
     .doctor-block {
       margin-bottom: 10px;
@@ -172,122 +176,124 @@
 
   <div class="container">
     <h1>ตารางแพทย์ออกตรวจนอกเวลา คลินิกจักษุ</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>วัน</th>
-          <th>แพทย์ออกตรวจ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>วันจันทร์ <br> 16.00น.-20.00น. </th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorA" class="doctor-link" target="_blank">นพ.มงคล ธาดารติ | Mongkol Tadarati MD.</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
-              <span class="note">ทุกวันจันทร์</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorB" class="doctor-link" target="_blank">พญ.นุชรี ปริวิสุทธิ์ | Nucharee Parivisut MD.</a>
-              <span class="specialty">ต้อหิน | Glaucoma</span>
-              <span class="note">วันจันทร์ สัปดาห์ที่ 1, 3 ของเดือน</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorC" class="doctor-link" target="_blank">พญ.วริยา งานทวี | Variya Nganthawee MD.</a>
-              <span class="specialty">จอตา และ ภูมิคุ้มกันและตาอักเสบ | Vitreoretina and Uveitis</span>
-              <span class="note">วันจันทร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>วันอังคาร <br> 16.00น.-20.00น.</th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorD" class="doctor-link" target="_blank">ศ.นพ.ไพศาล ร่วมวิบูลย์สุข | Clin. Prof. Paisarn Ruamviboonsuk MD.</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
-              <span class="note">ทุกวันอังคาร</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/sukhum.s" class="doctor-link" target="_blank">รศ.นพ.สุขุม ศิลปอาชา | Asso. Prof. Sukhum Silpa-Archa MD.</a>
-              <span class="specialty">จอตา และ ภูมิคุ้มกันและตาอักเสบ | Vitreoretina and Uveitis</span>
-              <span class="note">ทุกวันอังคาร</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>วันพุธ <br> 16.00น.-20.00น.</th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorF" class="doctor-link" target="_blank">พญ.กรกมล อัญนพวงค์ | Kornkamol Annopawong MD.</a>
-              <span class="specialty">ต้อหิน | Glaucoma</span>
-              <span class="note">ทุกวันพุธ</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorG" class="doctor-link" target="_blank">นพ.นิธีร์ รัตน์ประสาทพร | Nitee Ratprasatporn MD.</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitrous and Retina</span>
-              <span class="note">ทุกวันพุธ</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>วันพฤหัสบดี <br> 16.00น.-20.00น.</th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorH" class="doctor-link" target="_blank">นพ.จิรวุฒิ ลิ้มวัฒนายิ่งยง | Jirawut Limwattanayongyong MD.</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
-              <span class="note">ทุกวันพฤหัสบดี</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorI" class="doctor-link" target="_blank">พญ.ณัฐวดี อร่ามเธียรธำรง | Nattawadee Aramtiantamrong MD.</a>
-              <span class="specialty">กระจกตาและแก้ไขค่าสายตา | Cornea and Refractive Surgery</span>
-              <span class="note">ทุกวันพฤหัสบดี</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorJ" class="doctor-link" target="_blank">พญ.ปารีณา ชัยทนุวงศ์ | Pareena Chaitanuwong MD.</a>
-              <span class="specialty">ประสาทจักษุ | Neuro-ophthalmology</span>
-              <span class="note">วันพฤหัสบดี สัปดาห์ที่ 2 ของเดือน</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorK" class="doctor-link" target="_blank">นพ.วรากร เทียมทัด | Warakorn Tiamthat MD.</a>
-              <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
-              <span class="note">วันพฤหัสบดี สัปดาห์ที่ 1, 3 ของเดือน</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>วันศุกร์ <br> 16.00น.-20.00น.</th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorL" class="doctor-link" target="_blank">ผศ.พญ.อัจฉรา อัมพรพฤติ | Asst.Prof. Atchara Amphornphruet MD.</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
-              <span class="note">วันศุกร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorM" class="doctor-link" target="_blank">นพ.พีรณัฐ โชติค้ำวงศ์ | Peranut Chotcomwongse</a>
-              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
-              <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
-            </div>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/p.atipas" class="doctor-link" target="_blank">นพ.พงษ์ระพี อธิภาส | Pongrapee Atipas MD.</a>
-              <span class="specialty">ต้อหิน | Glaucoma</span>
-              <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>วันเสาร์ <br> 8.00น.- 12.00น.</th>
-          <td>
-            <div class="doctor-block">
-              <a href="https://linktr.ee/doctorO" class="doctor-link" target="_blank">พญ.รัติยา พรชัยสุรีย์ | Rattiya Pronchaisuree MD.</a>
-              <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
-              <span class="note">ทุกวันเสาร์</span>
-            </div>
-          </td>
-        </tr>
-        <!-- Sunday block removed -->
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>วัน</th>
+            <th>แพทย์ออกตรวจ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>วันจันทร์ <br> 16.00น.-20.00น. </th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorA" class="doctor-link" target="_blank">นพ.มงคล ธาดารติ | Mongkol Tadarati MD.</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+                <span class="note">ทุกวันจันทร์</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorB" class="doctor-link" target="_blank">พญ.นุชรี ปริวิสุทธิ์ | Nucharee Parivisut MD.</a>
+                <span class="specialty">ต้อหิน | Glaucoma</span>
+                <span class="note">วันจันทร์ สัปดาห์ที่ 1, 3 ของเดือน</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorC" class="doctor-link" target="_blank">พญ.วริยา งานทวี | Variya Nganthawee MD.</a>
+                <span class="specialty">จอตา และ ภูมิคุ้มกันและตาอักเสบ | Vitreoretina and Uveitis</span>
+                <span class="note">วันจันทร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>วันอังคาร <br> 16.00น.-20.00น.</th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorD" class="doctor-link" target="_blank">ศ.นพ.ไพศาล ร่วมวิบูลย์สุข | Clin. Prof. Paisarn Ruamviboonsuk MD.</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+                <span class="note">ทุกวันอังคาร</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/sukhum.s" class="doctor-link" target="_blank">รศ.นพ.สุขุม ศิลปอาชา | Asso. Prof. Sukhum Silpa-Archa MD.</a>
+                <span class="specialty">จอตาและวุ้นตาและตาอักเสบ | Vitreoretina and Uveitis</span>
+                <span class="note">ทุกวันอังคาร</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>วันพุธ <br> 16.00น.-20.00น.</th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorF" class="doctor-link" target="_blank">พญ.กรกมล อัญนพวงค์ | Kornkamol Annopawong MD.</a>
+                <span class="specialty">ต้อหิน | Glaucoma</span>
+                <span class="note">ทุกวันพุธ</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorG" class="doctor-link" target="_blank">นพ.นิธีร์ รัตน์ประสาทพร | Nitee Ratprasatporn MD.</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitrous and Retina</span>
+                <span class="note">ทุกวันพุธ</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>วันพฤหัสบดี <br> 16.00น.-20.00น.</th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorH" class="doctor-link" target="_blank">นพ.จิรวุฒิ ลิ้มวัฒนายิ่งยง | Jirawut Limwattanayongyong MD.</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+                <span class="note">ทุกวันพฤหัสบดี</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorI" class="doctor-link" target="_blank">พญ.ณัฐวดี อร่ามเธียรธำรง | Nattawadee Aramtiantamrong MD.</a>
+                <span class="specialty">กระจกตาและแก้ไขค่าสายตา | Cornea and Refractive Surgery</span>
+                <span class="note">ทุกวันพฤหัสบดี</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorJ" class="doctor-link" target="_blank">พญ.ปารีณา ชัยทนุวงศ์ | Pareena Chaitanuwong MD.</a>
+                <span class="specialty">ประสาทจักษุ | Neuro-ophthalmology</span>
+                <span class="note">วันพฤหัสบดี สัปดาห์ที่ 2 ของเดือน</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorK" class="doctor-link" target="_blank">นพ.วรากร เทียมทัด | Warakorn Tiamthat MD.</a>
+                <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
+                <span class="note">วันพฤหัสบดี สัปดาห์ที่ 1, 3 ของเดือน</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>วันศุกร์ <br> 16.00น.-20.00น.</th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorL" class="doctor-link" target="_blank">ผศ.พญ.อัจฉรา อัมพรพฤติ | Asst.Prof. Atchara Amphornphruet MD.</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+                <span class="note">วันศุกร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorM" class="doctor-link" target="_blank">นพ.พีรณัฐ โชติค้ำวงศ์ | Peranut Chotcomwongse</a>
+                <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+                <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
+              </div>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/p.atipas" class="doctor-link" target="_blank">นพ.พงษ์ระพี อธิภาส | Pongrapee Atipas MD.</a>
+                <span class="specialty">ต้อหิน | Glaucoma</span>
+                <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>วันเสาร์ <br> 8.00น.- 12.00น.</th>
+            <td>
+              <div class="doctor-block">
+                <a href="https://linktr.ee/doctorO" class="doctor-link" target="_blank">พญ.รัติยา พรชัยสุรีย์ | Rattiya Pronchaisuree MD.</a>
+                <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
+                <span class="note">ทุกวันเสาร์</span>
+              </div>
+            </td>
+          </tr>
+          <!-- Sunday block removed -->
+        </tbody>
+      </table>
+    </div>
     <p style="text-align:center; color:#888; font-size:13px;">
       Last updated: <span id="lastUpdated"></span>
     </p>
