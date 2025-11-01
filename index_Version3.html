@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ophthalmologist OPD Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    /* Splash screen styles */
+    #splash {
+      position: fixed;
+      z-index: 9999;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+      top: 0; left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.7s ease;
+    }
+    #splash-logo {
+      width: 50vw;
+      max-width: 280px;
+      height: auto;
+      object-fit: contain;
+      animation: splashpop 1.0s;
+      opacity: 0;
+      animation: splashpop 1.0s forwards;
+    }
+    @keyframes splashpop {
+      0% { transform: scale(0.8); opacity: 0.3; }
+      60% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    #splash.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+    .container {
+      max-width: 900px;
+      margin: 24px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 20px 7px;
+      width: 96vw;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #000000;
+      font-size: 1.1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      background: #f9fbfd;
+      font-size: 0.96em;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border: 1px solid #e1e8ed;
+      padding: 10px 6px;
+      text-align: left;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    th {
+      background: #fedeff;
+      font-weight: 600;
+      color: #000000;
+      text-align: center;
+      font-size: 1em;
+      min-width: 120px;
+      word-break: break-word;
+    }
+    td {
+      min-width: 120px;
+      font-size: 0.98em;
+      word-break: break-word;
+    }
+    .doctor-block {
+      margin-bottom: 10px;
+    }
+    a.doctor-link {
+      color: #2a6ad7;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.2s;
+      word-break: break-all;
+      font-size: 1em;
+    }
+    a.doctor-link:hover {
+      text-decoration: underline;
+    }
+    .specialty {
+      display: block;
+      font-size: 0.93em;
+      color: #40916c;
+      margin: 2px 0 0 0;
+      font-style: italic;
+      word-break: break-word;
+    }
+    .note {
+      display: block;
+      font-size: 0.93em;
+      color: #333333;
+      margin-top: 2px;
+      word-break: break-word;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 3vw 2vw;
+        width: 98vw;
+      }
+      th, td {
+        padding: 8px 4px;
+        font-size: 0.95em;
+      }
+      h1 {
+        font-size: 1em;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 1vw 1vw;
+        width: 99vw;
+      }
+      table {
+        font-size: 0.93em;
+      }
+      th, td {
+        padding: 6px 2px;
+        font-size: 0.93em;
+      }
+      h1 {
+        font-size: 0.99em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Splash Screen (shows for 1.5 seconds) -->
+  <div id="splash">
+    <img src="hospital-logo.png" alt="Rajavithi Hospital Logo" id="splash-logo">
+  </div>
+
+  <div class="container">
+    <h1>ตารางแพทย์ออกตรวจนอกเวลา คลินิกจักษุ</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>วัน</th>
+          <th>แพทย์ออกตรวจ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>วันจันทร์ <br> 16.00น.-20.00น. </th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorA" class="doctor-link" target="_blank">นพ.มงคล ธาดารติ | Mongkol Tadarati MD.</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+              <span class="note">ทุกวันจันทร์</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorB" class="doctor-link" target="_blank">พญ.นุชรี ปริวิสุทธิ์ | Nucharee Parivisut MD.</a>
+              <span class="specialty">ต้อหิน | Glaucoma</span>
+              <span class="note">วันจันทร์ สัปดาห์ที่ 1, 3 ของเดือน</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorC" class="doctor-link" target="_blank">พญ.วริยา งานทวี | Variya Nganthawee MD.</a>
+              <span class="specialty">จอตา และ ภูมิคุ้มกันและตาอักเสบ | Vitreoretina and Uveitis</span>
+              <span class="note">วันจันทร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>วันอังคาร <br> 16.00น.-20.00น.</th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorD" class="doctor-link" target="_blank">ศ.นพ.ไพศาล ร่วมวิบูลย์สุข | Clin. Prof. Paisarn Ruamviboonsuk MD.</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+              <span class="note">ทุกวันอังคาร</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/sukhum.s" class="doctor-link" target="_blank">รศ.นพ.สุขุม ศิลปอาชา | Asso. Prof. Sukhum Silpa-Archa MD.</a>
+              <span class="specialty">จอตาและวุ้นตาและตาอักเสบ | Vitreoretina and Uveitis</span>
+              <span class="note">ทุกวันอังคาร</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>วันพุธ <br> 16.00น.-20.00น.</th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorF" class="doctor-link" target="_blank">พญ.กรกมล อัญนพวงค์ | Kornkamol Annopawong MD.</a>
+              <span class="specialty">ต้อหิน | Glaucoma</span>
+              <span class="note">ทุกวันพุธ</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorG" class="doctor-link" target="_blank">นพ.นิธีร์ รัตน์ประสาทพร | Nitee Ratprasatporn MD.</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitrous and Retina</span>
+              <span class="note">ทุกวันพุธ</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>วันพฤหัสบดี <br> 16.00น.-20.00น.</th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorH" class="doctor-link" target="_blank">นพ.จิรวุฒิ ลิ้มวัฒนายิ่งยง | Jirawut Limwattanayongyong MD.</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+              <span class="note">ทุกวันพฤหัสบดี</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorI" class="doctor-link" target="_blank">พญ.ณัฐวดี อร่ามเธียรธำรง | Nattawadee Aramtiantamrong MD.</a>
+              <span class="specialty">กระจกตาและแก้ไขค่าสายตา | Cornea and Refractive Surgery</span>
+              <span class="note">ทุกวันพฤหัสบดี</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorJ" class="doctor-link" target="_blank">พญ.ปารีณา ชัยทนุวงศ์ | Pareena Chaitanuwong MD.</a>
+              <span class="specialty">ประสาทจักษุ | Neuro-ophthalmology</span>
+              <span class="note">วันพฤหัสบดี สัปดาห์ที่ 2 ของเดือน</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorK" class="doctor-link" target="_blank">นพ.วรากร เทียมทัด | Warakorn Tiamthat MD.</a>
+              <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
+              <span class="note">วันพฤหัสบดี สัปดาห์ที่ 1, 3 ของเดือน</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>วันศุกร์ <br> 16.00น.-20.00น.</th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorL" class="doctor-link" target="_blank">ผศ.พญ.อัจฉรา อัมพรพฤติ | Asst.Prof. Atchara Amphornphruet MD.</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+              <span class="note">วันศุกร์ สัปดาห์ที่ 2, 4 ของเดือน</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorM" class="doctor-link" target="_blank">นพ.พีรณัฐ โชติค้ำวงศ์ | Peranut Chotcomwongse</a>
+              <span class="specialty">จอตาและวุ้นตา | Vitreous and Retina</span>
+              <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
+            </div>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/p.atipas" class="doctor-link" target="_blank">นพ.พงษ์ระพี อธิภาส | Pongrapee Atipas MD.</a>
+              <span class="specialty">ต้อหิน | Glaucoma</span>
+              <span class="note">วันศุกร์ สัปดาห์ที่ 1, 3, 5 ของเดือน</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>วันเสาร์ <br> 8.00น.- 12.00น.</th>
+          <td>
+            <div class="doctor-block">
+              <a href="https://linktr.ee/doctorO" class="doctor-link" target="_blank">พญ.รัติยา พรชัยสุรีย์ | Rattiya Pronchaisuree MD.</a>
+              <span class="specialty">กล้ามเนื้อตา | Pediatrics and Strabismus</span>
+              <span class="note">ทุกวันเสาร์</span>
+            </div>
+          </td>
+        </tr>
+        <!-- Sunday block removed -->
+      </tbody>
+    </table>
+    <p style="text-align:center; color:#888; font-size:13px;">
+      Last updated: <span id="lastUpdated"></span>
+    </p>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.getElementById('splash').classList.add('hide');
+      }, 1500);
+      document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+    });
+  </script>
+</body>
+</html>
